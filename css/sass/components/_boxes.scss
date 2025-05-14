@@ -91,12 +91,14 @@
     width: 600px;
     max-width: 100%;
     margin: auto;
+
     .name {
         margin-bottom: 0;
         color: $main-color;
         font-weight: 600;
         font-size: 25px;
     }
+
     .des {
         font-size: 16px;
         font-weight: 400;
@@ -105,7 +107,7 @@
         color: $main-color-light;
         text-align: center;
     }
-    
+
     img {
         @include circle(180px);
     }
@@ -123,6 +125,7 @@
         height: 300px;
         object-fit: cover;
     }
+
     .content {
         position: absolute;
         top: 0;
@@ -136,13 +139,13 @@
         transition: $sm-transition;
         transform-origin: bottom;
         background-color: #ffa826d6;
-        
+
         .title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
         }
-    
+
         .des {
             font-size: 15px;
             font-weight: 400;
@@ -150,8 +153,10 @@
             margin-bottom: 0px;
         }
     }
+
     &:hover {
         transform: translateY(10px);
+
         .content {
             transform: scale(1);
         }
@@ -334,7 +339,6 @@
     }
 }
 
-/////new
 .box-intro {
     position: absolute;
     inset-inline-start: 0;
@@ -376,29 +380,19 @@
     }
 }
 
-.box-other-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 13px;
+.box-gallery {
+    @include full-w-h;
 
-    img {
-        @include circle(150px);
-        transition: $sm-transition;
-    }
-
-    .name {
-        font-weight: 600;
-        font-size: 18px;
-        color: $main-color;
-    }
-
-    &:hover {
-        img {
-            transform: scale(1.06) rotate(20deg);
-        }
+    .img {
+        @include set-cover-img;
+        height: 300px;
+        max-width: 100%;
     }
 }
+
+
+
+
 
 .card-client {
     display: flex;
