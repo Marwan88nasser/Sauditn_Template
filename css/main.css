@@ -1073,9 +1073,6 @@ textarea:focus::placeholder {
 }
 .main-nav h1 .navbar-brand {
   margin-left: 0;
-  font-size: 30px;
-  color: #fff;
-  font-weight: 700;
 }
 .main-nav h1 .navbar-brand img {
   width: 200px;
