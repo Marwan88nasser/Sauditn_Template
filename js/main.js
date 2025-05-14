@@ -15,21 +15,6 @@ new Swiper(".swiper-landing", {
   },
 });
 
-new Swiper(".swiper-works", {
-  slidesPerView: 1,
-  grabCursor: true,
-  loop: true,
-  speed: 1000,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
 // scroll to top btn
 if (document.getElementById("up-btn")) {
   const upBtn = document.getElementById("up-btn");
@@ -42,3 +27,20 @@ if (document.getElementById("up-btn")) {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
   );
 }
+
+
+new Swiper(".swiper-cat", {
+    parallax: true,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 10,
+    speed: 2000,
+    autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});

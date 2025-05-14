@@ -44,27 +44,3 @@
     }
   }
 }
-
-.swiper-works {
-  height: fit-content;
-
-  .holder-control {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    width: 280px;
-    max-width: 100%;
-    transform: translateX(-50%);
-    @include flex-justify(center);
-
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    height: fit-content;
-    &::after {
-      font-size: 25px;
-      font-weight: 700;
-      color: $main-color;
-    }
-  }
-}
