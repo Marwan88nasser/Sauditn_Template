@@ -16,6 +16,13 @@
         left: 0;
         @include full-w-h;
       }
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        @include full-w-h;
+        background-color: #0000003b;
+    }
     }
   }
 

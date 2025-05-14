@@ -712,6 +712,14 @@
   width: 100%;
   height: 100%;
 }
+.swiper-landing .swiper-wrapper .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.231372549);
+}
 .swiper-landing .swiper-pagination {
   bottom: 3%;
   display: flex;
@@ -1033,44 +1041,44 @@ textarea:focus::placeholder {
   }
 }
 
-.site-header .main-nav {
+.main-nav {
   box-shadow: 0px 4px 4px 0px rgba(178, 178, 178, 0.2);
   min-height: 108px;
   padding: 0;
 }
 @media (max-width: 767.98px) {
-  .site-header .main-nav {
+  .main-nav {
     padding: 7px 0px;
   }
 }
-.site-header .main-nav h1 .navbar-brand {
+.main-nav h1 .navbar-brand {
   margin-left: 0;
   font-size: 30px;
   color: #fff;
   font-weight: 700;
 }
-.site-header .main-nav h1 .navbar-brand img {
+.main-nav h1 .navbar-brand img {
   width: 200px;
   height: auto;
 }
-.site-header .main-nav .navbar-toggler {
+.main-nav .navbar-toggler {
   padding: 0;
   border: 0px;
 }
-.site-header .main-nav .navbar-toggler:focus {
+.main-nav .navbar-toggler:focus {
   box-shadow: none;
 }
-.site-header .main-nav .navbar-toggler i,
-.site-header .main-nav .navbar-toggler svg {
+.main-nav .navbar-toggler i,
+.main-nav .navbar-toggler svg {
   font-size: 31px;
   color: #fff;
 }
-.site-header .main-nav .navbar-collapse .navbar-nav {
+.main-nav .navbar-nav {
   flex: 1;
   justify-content: center;
   gap: 39px;
 }
-.site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+.main-nav .navbar-nav .nav-item .nav-link {
   position: relative;
   padding: 10px 15px;
   font-size: 16px;
@@ -1079,10 +1087,10 @@ textarea:focus::placeholder {
   letter-spacing: 0px;
   color: #fff;
 }
-.site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link.active {
+.main-nav .navbar-nav .nav-item .nav-link.active {
   color: #e1af5b;
 }
-.site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link.active::after {
+.main-nav .navbar-nav .nav-item .nav-link.active::after {
   position: absolute;
   content: "";
   right: 0;
@@ -1093,14 +1101,14 @@ textarea:focus::placeholder {
   background-color: #e1af5b;
 }
 @media (max-width: 767.98px) {
-  .site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link.active::after {
+  .main-nav .navbar-nav .nav-item .nav-link.active::after {
     transform: scale(1);
   }
 }
-.site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link.active::before {
+.main-nav .navbar-nav .nav-item .nav-link.active::before {
   content: none;
 }
-.site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link::before {
+.main-nav .navbar-nav .nav-item .nav-link::before {
   position: absolute;
   content: "";
   right: 0;
@@ -1111,18 +1119,69 @@ textarea:focus::placeholder {
   transform: scale(0);
   background-color: #fff;
 }
-.site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover::before {
+.main-nav .navbar-nav .nav-item .nav-link:hover::before {
   transform: scale(0.8);
 }
 @media (max-width: 767.98px) {
-  .site-header .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover::before {
+  .main-nav .navbar-nav .nav-item .nav-link:hover::before {
     transform: scale(1);
   }
+}
+.main-nav .btn-lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  padding: 4px 7px;
+  border-radius: 2px 0px 0px 0px;
+  border: 0.5px solid #e1af5b;
+  background-color: #e1af5b;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  transition: 0.3s;
+}
+.main-nav .btn-lang img {
+  width: 13px;
+  height: auto;
+}
+.main-nav .btn-lang::after {
+  content: none;
+}
+.main-nav .btn-lang:hover {
+  transform: scale(1.06);
+}
+.main-nav .dropdown-menu {
+  display: block !important;
+  right: unset;
+  inset-inline-end: 0;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  transform: scale(0) translateY(30px);
+  transition: 0.3s;
+}
+.main-nav .dropdown-menu li .dropdown-item {
+  font-size: 14px;
+  color: #777;
+}
+.main-nav .dropdown-menu li .dropdown-item img {
+  width: 16px;
+}
+.main-nav .dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.main-nav .dropdown-menu.show {
+  transform: scale(1) translateY(0px);
 }
 
 .landing-holder {
   position: relative;
-  height: 78vh;
+  height: 83vh;
 }
 .landing-holder .site-header {
   position: absolute;
