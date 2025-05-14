@@ -1295,17 +1295,13 @@ textarea:focus::placeholder {
 
 .other-image {
   position: relative;
-  margin-bottom: 50px;
 }
 .other-image .container {
-  z-index: 1;
   position: absolute;
-  top: -80px;
+  top: -85px;
   left: 50%;
+  z-index: 1;
   transform: translateX(-50%);
-  background-color: rgba(225, 175, 91, 0.568627451);
-  border-radius: 10px;
-  padding: 13px;
 }
 .other-image .container .box-other-image {
   display: flex;
@@ -1322,7 +1318,7 @@ textarea:focus::placeholder {
 .other-image .container .box-other-image .name {
   font-weight: 600;
   font-size: 18px;
-  color: #fff;
+  color: #b88f49;
 }
 .other-image .container .box-other-image:hover img {
   transform: scale(1.06) rotate(20deg);
