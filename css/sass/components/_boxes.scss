@@ -381,12 +381,36 @@
 }
 
 .box-gallery {
+    position: relative;
+    display: block;
     @include full-w-h;
 
     .img {
         @include set-cover-img;
         height: 300px;
         max-width: 100%;
+    }
+    .overlay {
+        @include center-position;
+        @include full-w-h;
+        @include flex-column-center;
+        gap: 15px;
+        background-color: $main-color;
+        font-size: 30px;
+        font-weight: 600;
+        color: $white-color;
+        transition: $sm-transition;
+        opacity: 0;
+        visibility: hidden;
+        i,svg {
+            font-size: 50px;
+        }
+    }
+    &:hover {
+        .overlay {
+            opacity: 0.95;
+            visibility: visible;
+        }
     }
 }
 
