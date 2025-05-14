@@ -637,7 +637,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  background-color: #b88f49;
+  background-color: rgba(255, 167, 38, 0.9);
   font-size: 30px;
   font-weight: 600;
   color: #fff;
@@ -649,7 +649,7 @@
   font-size: 50px;
 }
 .box-gallery:hover .overlay {
-  opacity: 0.95;
+  opacity: 1;
   visibility: visible;
 }
 

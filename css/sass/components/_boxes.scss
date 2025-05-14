@@ -395,7 +395,7 @@
         @include full-w-h;
         @include flex-column-center;
         gap: 15px;
-        background-color: $main-color;
+        background-color: rgba(255, 167, 38, 0.9);
         font-size: 30px;
         font-weight: 600;
         color: $white-color;
@@ -408,7 +408,7 @@
     }
     &:hover {
         .overlay {
-            opacity: 0.95;
+            opacity: 1;
             visibility: visible;
         }
     }
