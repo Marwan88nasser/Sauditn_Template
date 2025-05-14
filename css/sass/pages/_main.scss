@@ -1,6 +1,6 @@
 .landing-holder {
     position: relative;
-    height: 100vh;
+    height: 78vh;
 
     .site-header {
         position: absolute;
@@ -8,6 +8,7 @@
         left: 0;
         width: 100%;
         z-index: 111;
+
         .main-nav {
             box-shadow: unset;
         }
@@ -140,7 +141,9 @@
 }
 
 .Offers {
-    background: url(../images/services-bg.png) no-repeat fixed center center/cover;
+    //  url(../images/services-bg.png) no-repeat fixed center center/cover
+    background: url(../../../images/services-bg.png) no-repeat fixed center center / cover;
+
     * {
         color: $white-color;
     }
