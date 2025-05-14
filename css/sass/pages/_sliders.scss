@@ -40,7 +40,6 @@
 
 .swiper-works {
   height: fit-content;
-  padding: 15px 15px 70px;
 
   .holder-control {
     position: absolute;
@@ -50,37 +49,15 @@
     max-width: 100%;
     transform: translateX(-50%);
     @include flex-justify(center);
-    .swiper-pagination {
-      z-index: unset;
-      .swiper-pagination-bullet {
-        width: 32px;
-        height: 4px;
-        border-radius: 6px;
-        opacity: 1;
-        transition: $sm-transition;
-        background-color: rgba(47, 47, 47, 0.3);
-        &.swiper-pagination-bullet-active {
-          background-color: $main-color;
-        }
-      }
-    }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-      height: fit-content;
-      &::after {
-        font-size: 19px;
-        font-weight: 700;
-        color: $main-color;
-      }
-    }
-    .swiper-button-next {
-      right: 0%;
-    }
-    .swiper-button-prev {
-      left: 0%;
-      
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    height: fit-content;
+    &::after {
+      font-size: 25px;
+      font-weight: 700;
+      color: $main-color;
     }
   }
-
 }
