@@ -1245,7 +1245,7 @@ textarea:focus::placeholder {
 }
 
 .Offers {
-  background: url(../../../images/services-bg.png) no-repeat fixed center center/cover;
+  background: url(../images/services-bg.png) no-repeat fixed center center/cover;
 }
 .Offers * {
   color: #fff;
