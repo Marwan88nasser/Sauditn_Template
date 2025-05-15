@@ -90,56 +90,6 @@
     flex-direction: column;
 }
 
-.dream-makers {
-    .col {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        .img-section {
-            width: 100%;
-            height: auto;
-            max-height: 450px;
-        }
-
-        .text-section {
-            color: rgba(47, 47, 47, 0.8);
-            text-align: justify;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 200%;
-            margin: 0;
-
-            span {
-                color: $main-color;
-                font-weight: 600;
-            }
-        }
-
-        .list-section {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            color: #2f2f2f;
-            text-align: justify;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 30px;
-            /* 200% */
-            margin-top: 24px;
-
-            li {
-                list-style-type: none;
-                background-image: url("../../../images/icons/cr-done-green.png");
-                background-repeat: no-repeat;
-                padding-left: calc(24px + 8px);
-                background-size: 24px;
-                background-position: left center;
-            }
-        }
-    }
-}
-
 .other-image {
     position: relative;
     .container {

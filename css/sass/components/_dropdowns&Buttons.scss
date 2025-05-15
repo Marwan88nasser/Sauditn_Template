@@ -63,25 +63,40 @@
       background-color: $main-color;
     }
   }
-  
-}
-.btn-white {
-  padding: 16px;
-  border-radius: 8px !important;
-  gap: 10px;
-  border:  1px solid $main-color;
-  background-color: #fff;
-  color: $main-color;
-  border-radius: 2px;
-  padding: 10px 64px;
-  transition: $main-transition;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 21px;
 
-  &:hover {
-    background-color: $main-color;
+}
+
+.btn-ripple {
+  position: relative;
+  @include flex-center;
+  @include circle(72px);
+  background-color: #ff0000;
+  transition: 0.3s;
+  z-index: 1;
+  i,svg {
+    font-size: 26px;
     color: #fff;
   }
-  
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include circle(72px);
+    background-color: rgb(228 21 21 / 80%);
+    animation: ripple-1 2s infinite ease-in-out;
+    z-index: -1;
+  }
+
+  &::after {
+    background-color: rgb(255 34 34 / 60%);
+    animation: ripple-1 2s infinite ease-in-out;
+    animation-delay: 0.5s;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
 }
