@@ -69,10 +69,10 @@
 .btn-ripple {
   position: relative;
   @include flex-center;
-  @include circle(72px);
-  background-color: #ff0000;
+  @include circle(75px);
+  background-color: #ff1a1a;
   transition: 0.3s;
-  z-index: 1;
+  z-index: 222;
   i,svg {
     font-size: 26px;
     color: #fff;
@@ -84,14 +84,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    @include circle(72px);
-    background-color: rgb(228 21 21 / 80%);
+    @include circle(75px);
+    background-color: rgba(255, 0, 0, 0.8);
     animation: ripple-1 2s infinite ease-in-out;
     z-index: -1;
   }
 
   &::after {
-    background-color: rgb(255 34 34 / 60%);
+    background-color: rgba(255, 0, 0, 0.6);
     animation: ripple-1 2s infinite ease-in-out;
     animation-delay: 0.5s;
   }
