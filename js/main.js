@@ -30,7 +30,6 @@ if (document.getElementById("up-btn")) {
 
 new Swiper(".swiper-landmarks", {
   parallax: true,
-  loop: true,
   grabCursor: true,
   centeredSlides: true,
   spaceBetween: 10,
