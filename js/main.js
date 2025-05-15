@@ -28,19 +28,19 @@ if (document.getElementById("up-btn")) {
   );
 }
 
-
 new Swiper(".swiper-landmarks", {
-    parallax: true,
-    loop: true,
-    centeredSlides: true,
-    spaceBetween: 10,
-    speed: 2000,
-    autoplay: {
-        delay: 4500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+  parallax: true,
+  loop: true,
+  grabCursor: true,
+  centeredSlides: true,
+  spaceBetween: 10,
+  speed: 2000,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
