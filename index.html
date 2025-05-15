@@ -21,6 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
   </head>
 
   <body>
@@ -254,75 +258,107 @@
     <!-- Start works -->
     <div class="works pt-5 pb-1">
       <div class="container-fluid">
-        <div class="row g-3">
+        <div class="row g-3" x-data="{ selected: 'alula' }">
           <div class="col-12 col-md-3">
             <div class="holder-cat">
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
+              <button type="button" class="box-cat" @click="selected = 'alula'">
+                <span class="cat-name">العلا</span>
+                <img src="images/Landmark-1.jpg" alt="" />
               </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
+
+              <button
+                type="button"
+                class="box-cat"
+                @click="selected = 'alahsa'"
+              >
+                <span class="cat-name">الأحساء</span>
+                <img src="images/Landmark-2.jpg" alt="" />
               </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
+
+              <button type="button" class="box-cat" @click="selected = 'tahul'">
+                <span class="cat-name">عسير تهول</span>
+                <img src="images/Landmark-3.webp" alt="" />
               </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
-              </button>
-              <button type="button" class="box-cat">
-                <span class="cat-name">اسم المعلم</span>
-                <img src="images/image-preview.webp" alt="" />
+              <button
+                type="button"
+                class="box-cat"
+                @click="selected = 'mosmak'"
+              >
+                <span class="cat-name">قصر المصمك</span>
+                <img src="images/Landmark-4.webp" alt="" />
               </button>
             </div>
           </div>
           <div class="col-12 col-md-9">
-            <!-- Swiper -->
-            <div class="swiper content-cat swiper-cat">
+            <!-- Swiper alula -->
+            <div
+              class="swiper swiper-landmarks"
+              x-show="selected === 'alula'"
+              x-transition
+            >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="content">
                     <div class="items">
                       <h3 class="title" data-swiper-parallax="-1200">
-                        عسير.. جوها عليل، وطبيعتها تخطف ...
+                        العلا كنز التاريخ وسحر الطبيعة
                       </h3>
-                      <p class="text" data-swiper-parallax="-1200">
-                        في كل زاوية من وطننا، قصة تحكي عن عراقة، وشعب يفخر
-                        بتراثه. من طويق الشامخ إلى واحة الأحساء، ومن المهرجانات
-                        التراثية إلى رؤية 2030، تمضي السعودية بخطى ثابتة نحو
-                        مستقبل مشرق يكرّم الماضي ويحتفي به.
-                      </p>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>الموقع:</span>
+                        تقع العُلا في شمال غرب المملكة العربية السعودية، وهي
+                        تابعة لمنطقة المدينة المنورة. وتُعد من أهم الوجهات
+                        السياحية في السعودية بفضل ما تتمتع به من تراث عالمي
+                        وطبيعة خلابة.
+                      </h5>
+                      <ul data-swiper-parallax="-1200" class="list-info mt-3">
+                        <li>
+                          <h6 class="title-ul">
+                            أهم المعالم السياحية في العُلا:
+                          </h6>
+                        </li>
+                      </ul>
+                      <div class="d-flex gap-3" data-swiper-parallax="-1200">
+                        <ul class="list-info flex-grow-1">
+                          <li>1. مدائن صالح (الحِجر)</li>
+                          <li>2. جبل الفيل</li>
+                          <li>3. البلدة القديمة في العُلا</li>
+                        </ul>
+                        <ul class="list-info flex-grow-1">
+                          <li>4. وادي العُلا والواحة</li>
+                          <li>5. دادان وجبل عِكمة</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/Landmark-1.jpg"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        العلا كنز التاريخ وسحر الطبيعة
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أهم المعالم السياحية في العُلا:</span>
+                      </h5>
+
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">1. مدائن صالح (الحِجر)</li>
+                        <li>
+                          أول موقع سعودي مسجل في قائمة التراث العالمي لليونسكو.
+                        </li>
+                        <li>
+                          يحتوي على أكثر من 100 قبر منحوت في الصخور لحضارة
+                          الأنباط.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <img
@@ -335,15 +371,19 @@
                 <div class="swiper-slide">
                   <div class="content">
                     <div class="items">
-                      <h3 class="title" data-swiper-parallax="-1200">
-                        عسير.. جوها عليل، وطبيعتها تخطف ...
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        العلا كنز التاريخ وسحر الطبيعة
                       </h3>
-                      <p class="text" data-swiper-parallax="-1200">
-                        في كل زاوية من وطننا، قصة تحكي عن عراقة، وشعب يفخر
-                        بتراثه. من طويق الشامخ إلى واحة الأحساء، ومن المهرجانات
-                        التراثية إلى رؤية 2030، تمضي السعودية بخطى ثابتة نحو
-                        مستقبل مشرق يكرّم الماضي ويحتفي به.
-                      </p>
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أهم المعالم السياحية في العُلا:</span>
+                      </h5>
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">2. جبل الفيل</li>
+                        <li>
+                          تشكيل صخري طبيعي مذهل على شكل فيل، يقع وسط صحراء
+                          مفتوحة، مثالي للتصوير والاسترخاء.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <img
@@ -356,20 +396,366 @@
                 <div class="swiper-slide">
                   <div class="content">
                     <div class="items">
-                      <h3 class="title" data-swiper-parallax="-1200">
-                        عسير.. جوها عليل، وطبيعتها تخطف ...
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        العلا كنز التاريخ وسحر الطبيعة
                       </h3>
-                      <p class="text" data-swiper-parallax="-1200">
-                        في كل زاوية من وطننا، قصة تحكي عن عراقة، وشعب يفخر
-                        بتراثه. من طويق الشامخ إلى واحة الأحساء، ومن المهرجانات
-                        التراثية إلى رؤية 2030، تمضي السعودية بخطى ثابتة نحو
-                        مستقبل مشرق يكرّم الماضي ويحتفي به.
-                      </p>
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أهم المعالم السياحية في العُلا:</span>
+                      </h5>
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">
+                          3. البلدة القديمة في العُلا
+                        </li>
+                        <li>
+                          تضم أطلال منازل وأسواق ومساجد تقليدية من القرن 12
+                          الميلادي، ويمكنك التجول فيها عبر ممرات تراثية مرصوفة.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <img
                     loading="lazy"
                     src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        العلا كنز التاريخ وسحر الطبيعة
+                      </h3>
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أهم المعالم السياحية في العُلا:</span>
+                      </h5>
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">4. وادي العُلا والواحة</li>
+                        <li>
+                          منطقة خضراء وسط الجبال، تنتشر فيها مزارع النخيل
+                          والحمضيات، مثالية للتنزه وجولات المشي.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        العلا كنز التاريخ وسحر الطبيعة
+                      </h3>
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أهم المعالم السياحية في العُلا:</span>
+                      </h5>
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">5. دادان وجبل عِكمة</li>
+                        <li>
+                          موقعان أثريان في العلا يكشفان عن تاريخ حضاري عريق عبر
+                          نقوش وصخور تعود لآلاف السنين.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Swiper alahsa -->
+            <div
+              class="swiper swiper-landmarks"
+              x-show="selected === 'alahsa'"
+              x-transition
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title" data-swiper-parallax="-1200">
+                        الأحساء – واحة التاريخ والجمال الطبيعي
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>الموقع:</span>
+                        تقع الأحساء في المنطقة الشرقية من المملكة العربية
+                        السعودية، وتُعد واحدة من أقدم المناطق المأهولة بالسكان
+                        في شبه الجزيرة العربية، وواحدة من أكبر الواحات الزراعية
+                        في العالم.
+                      </h5>
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li>
+                          <h6 class="title-ul">لماذا الأحساء؟</h6>
+                        </li>
+                        <li>
+                          1. موطن واحة النخيل الأكبر في العالم (أكثر من 3 ملايين
+                          نخلة).
+                        </li>
+                        <li>
+                          2. مزيج رائع بين الطبيعة الخلابة، التراث العريق،
+                          والأسواق الشعبية.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/Landmark-2.jpg"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Swiper tahul -->
+            <div
+              class="swiper swiper-landmarks"
+              x-show="selected === 'tahul'"
+              x-transition
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title" data-swiper-parallax="-1200">
+                        عسير تهول – الجمال الجبلي والضباب الساحر
+                      </h3>
+                      <h5 class="title-sm mb-3" data-swiper-parallax="-1200">
+                        <span>الموقع:</span>
+                        تقع منطقة عسير جنوب غرب المملكة العربية السعودية،
+                        وتتميّز بطبيعتها الجبلية، ومناخها المعتدل، وتراثها
+                        الغني.
+                      </h5>
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li>
+                          <h6 class="title-ul">لماذا عسير؟</h6>
+                        </li>
+                        <li>
+                          1. جو معتدل صيفًا وبارد شتاءً، مثالي للهروب من حرارة
+                          المدن.
+                        </li>
+                        <li>
+                          2. جبال شاهقة، غابات خضراء، قرى تراثية، وأسواق شعبية.
+                        </li>
+                      </ul>
+                      <ul class="list-info mt-3" data-swiper-parallax="-1200">
+                        <li>
+                          <h6 class="title-ul">
+                            أبرز المعالم السياحية في عسير:
+                          </h6>
+                        </li>
+                      </ul>
+                      <div class="d-flex gap-3" data-swiper-parallax="-1200">
+                        <ul class="list-info flex-grow-1">
+                          <li>1. جبل السودة.</li>
+                          <li>2. قرية رجال ألمع التراثية.</li>
+                          <li>3. منتزه الحبلة.</li>
+                        </ul>
+                        <ul class="list-info flex-grow-1">
+                          <li>4. مدينة أبها.</li>
+                          <li>5. منتزه السحاب.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/Landmark-3.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        عسير تهول – الجمال الجبلي والضباب الساحر
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أبرز المعالم السياحية في عسير:</span>
+                      </h5>
+
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">1. جبل السودة</li>
+                        <li>
+                          أعلى قمة في السعودية، أكثر من 3,000 متر فوق سطح البحر.
+                        </li>
+                        <li>ضباب دائم، غابات عرعر، ومناظر طبيعية خلابة.</li>
+                        <li>تلفريك يربط الجبل بوادي تهامة.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        عسير تهول – الجمال الجبلي والضباب الساحر
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أبرز المعالم السياحية في عسير:</span>
+                      </h5>
+
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">
+                          2. قرية رجال ألمع التراثية
+                        </li>
+                        <li>
+                          أحد أجمل القرى التراثية في المملكة، وتطمح لتسجيلها في
+                          اليونسكو.
+                        </li>
+                        <li>
+                          بيوتها مبنية من الحجر والطين والخشب بزخارف فنية مميزة.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        عسير تهول – الجمال الجبلي والضباب الساحر
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أبرز المعالم السياحية في عسير:</span>
+                      </h5>
+
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">3. منتزه الحبلة</li>
+                        <li>
+                          يقع على حافة جرف جبلي عميق، يضم مناظر طبيعية ساحرة.
+                        </li>
+                        <li>تلفريك يهبط إلى القرية القديمة في الأسفل.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        عسير تهول – الجمال الجبلي والضباب الساحر
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أبرز المعالم السياحية في عسير:</span>
+                      </h5>
+
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">4. مدينة أبها</li>
+                        <li>
+                          عاصمة عسير، تتميز بأجوائها اللطيفة، وأسواقها
+                          التقليدية.
+                        </li>
+                        <li>
+                          تضم معالم مثل قصر شدا، بحيرة السد، وسوق الثلاثاء.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title mb-3" data-swiper-parallax="-1200">
+                        عسير تهول – الجمال الجبلي والضباب الساحر
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        <span>أبرز المعالم السياحية في عسير:</span>
+                      </h5>
+
+                      <ul data-swiper-parallax="-1200" class="list-info">
+                        <li class="title-ul mb-2">5. منتزه السحاب</li>
+                        <li>
+                          يقع فوق الغيوم، ويوفر إطلالات بانورامية مذهلة على
+                          تهامة والسواحل الغربية.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/image-preview.webp"
+                    alt="img"
+                    class="land-swiper"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Swiper alahsa -->
+            <div
+              class="swiper swiper-landmarks"
+              x-show="selected === 'mosmak'"
+              x-transition
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="content">
+                    <div class="items">
+                      <h3 class="title" data-swiper-parallax="-1200">
+                        قصر المصمك
+                      </h3>
+
+                      <h5 class="title-sm" data-swiper-parallax="-1200">
+                        بُني قصر المصمك في عام 1865م بأمر من الإمام عبد الله بن
+                        فيصل بن تركي آل سعود، واكتمل بناؤه في عام 1895م خلال حكم
+                        آل رشيد. يقع القصر في حي الديرة وسط الرياض، بالقرب من
+                        قصر الحكم .
+                      </h5>
+                      <p data-swiper-parallax="-1200" class="text">
+                        شهد القصر حدثًا تاريخيًا مهمًا في عام 1902م، عندما
+                        استعاد الملك عبد العزيز بن عبد الرحمن آل سعود مدينة
+                        الرياض من آل رشيد، مما مهد لتوحيد المملكة العربية
+                        السعودية. بعد ذلك، استخدم القصر كمستودع للذخيرة حتى عام
+                        1938م، ثم تم ترميمه وافتتاحه كمتحف في عام 1995م
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    loading="lazy"
+                    src="images/Landmark-4.webp"
                     alt="img"
                     class="land-swiper"
                   />

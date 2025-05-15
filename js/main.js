@@ -29,7 +29,7 @@ if (document.getElementById("up-btn")) {
 }
 
 
-new Swiper(".swiper-cat", {
+new Swiper(".swiper-landmarks", {
     parallax: true,
     loop: true,
     centeredSlides: true,

@@ -499,6 +499,7 @@
         overflow: hidden;
 
         img {
+
             object-fit: cover;
             @include full-w-h;
         }
@@ -526,7 +527,7 @@
     }
 }
 
-.content-cat {
+.swiper-landmarks {
     .swiper-wrapper {
         .swiper-slide {
             height: 318px;
@@ -547,9 +548,10 @@
                 }
 
                 .title {
-                    font-size: 32px;
+                    font-size: 30px;
                     color: $main-color;
-                    margin-bottom: 25px;
+                    margin-bottom: 10px;
+                    font-weight: 600;
 
                     span {
                         color: $active-nav-link;
@@ -557,15 +559,32 @@
                 }
 
                 .title-sm {
-                    font-size: 20px;
-                    margin: 15px 0;
-                    color: $active-nav-link;
+                    font-size: 17px;
+                    margin-bottom: 15px;
+                    line-height: 25px;
+                    color: #595959d6;
+                    span {
+                        display: block;
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
                 }
 
                 .text {
-                    font-size: 18px;
+                    font-size: 17px;
                     color: #757575;
-                    margin-bottom: 1rem;
+                }
+
+                .list-info {
+                    li {
+                        font-size: 15px;
+                        margin-bottom: 0.3rem;
+                        color: #616161;
+                    }
+
+                    .title-ul {
+                        font-size: 17px;
+                    }
                 }
 
                 .main-btn {

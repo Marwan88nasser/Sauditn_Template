@@ -753,45 +753,59 @@
   visibility: visible;
 }
 
-.content-cat .swiper-wrapper .swiper-slide {
+.swiper-landmarks .swiper-wrapper .swiper-slide {
   height: 318px;
   display: flex;
   gap: 2rem;
 }
-.content-cat .swiper-wrapper .swiper-slide .content {
+.swiper-landmarks .swiper-wrapper .swiper-slide .content {
   height: 100%;
   width: 40.3%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.content-cat .swiper-wrapper .swiper-slide .content .img {
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .img {
   width: 100px;
   max-width: 100%;
   height: auto;
 }
-.content-cat .swiper-wrapper .swiper-slide .content .title {
-  font-size: 32px;
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .title {
+  font-size: 30px;
   color: #b88f49;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
-.content-cat .swiper-wrapper .swiper-slide .content .title span {
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .title span {
   color: #e1af5b;
 }
-.content-cat .swiper-wrapper .swiper-slide .content .title-sm {
-  font-size: 20px;
-  margin: 15px 0;
-  color: #e1af5b;
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .title-sm {
+  font-size: 17px;
+  margin-bottom: 15px;
+  line-height: 25px;
+  color: rgba(89, 89, 89, 0.8392156863);
 }
-.content-cat .swiper-wrapper .swiper-slide .content .text {
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .title-sm span {
+  display: block;
   font-size: 18px;
-  color: #757575;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
 }
-.content-cat .swiper-wrapper .swiper-slide .content .main-btn {
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .text {
+  font-size: 17px;
+  color: #757575;
+}
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .list-info li {
+  font-size: 15px;
+  margin-bottom: 0.3rem;
+  color: #616161;
+}
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .list-info .title-ul {
+  font-size: 17px;
+}
+.swiper-landmarks .swiper-wrapper .swiper-slide .content .main-btn {
   margin-inline: auto;
 }
-.content-cat .swiper-wrapper .swiper-slide .land-swiper {
+.swiper-landmarks .swiper-wrapper .swiper-slide .land-swiper {
   flex: 1;
   height: 100%;
   width: 100%;
@@ -799,20 +813,20 @@
      object-fit: cover;
 }
 @media (max-width: 991.98px) {
-  .content-cat .swiper-wrapper .swiper-slide {
+  .swiper-landmarks .swiper-wrapper .swiper-slide {
     flex-direction: column-reverse;
     height: auto;
   }
-  .content-cat .swiper-wrapper .swiper-slide .content {
+  .swiper-landmarks .swiper-wrapper .swiper-slide .content {
     width: 100%;
   }
-  .content-cat .swiper-wrapper .swiper-slide .land-swiper {
+  .swiper-landmarks .swiper-wrapper .swiper-slide .land-swiper {
     height: 257px;
     flex: unset;
     width: 100%;
   }
 }
-.content-cat .swiper-pagination {
+.swiper-landmarks .swiper-pagination {
   position: relative;
   display: flex;
   align-items: center;
@@ -820,7 +834,7 @@
   margin-top: 35px;
   padding: 0 2%;
 }
-.content-cat .swiper-pagination .swiper-pagination-bullet {
+.swiper-landmarks .swiper-pagination .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   opacity: 1;
@@ -828,11 +842,11 @@
   background-color: #fff;
   border: 1px solid #b88f49;
 }
-.content-cat .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.swiper-landmarks .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #b88f49;
 }
 @media (min-width: 992px) {
-  .content-cat .content {
+  .swiper-landmarks .content {
     width: 50%;
   }
 }
