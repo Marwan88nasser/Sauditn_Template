@@ -380,6 +380,14 @@
     }
 }
 
+.video {
+    width: 100%;
+    height: 600px;
+    img {
+        @include set-cover-img;
+    }
+}
+
 .box-gallery {
     position: relative;
     display: block;
@@ -528,91 +536,81 @@
 }
 
 .swiper-landmarks {
-    .swiper-wrapper {
-        .swiper-slide {
-            height: 318px;
+    height: auto;
+    padding-bottom: 25px;
+    .swiper-slide {
+        display: flex;
+        height: 320px;
+        gap: 1.5rem;
+
+        .content {
+            height: 100%;
+            width: 40.3%;
             display: flex;
-            gap: 2rem;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .title {
+                font-size: 30px;
+                color: $main-color;
+                margin-bottom: 10px;
+                font-weight: 600;
+
+                span {
+                    color: $active-nav-link;
+                }
+            }
+
+            .title-sm {
+                font-size: 17px;
+                margin-bottom: 15px;
+                line-height: 25px;
+                color: #595959d6;
+                span {
+                    display: block;
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .text {
+                font-size: 17px;
+                color: #757575;
+            }
+
+            .list-info {
+                li {
+                    font-size: 15px;
+                    margin-bottom: 0.3rem;
+                    color: #616161;
+                }
+
+                .title-ul {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .land-swiper {
+            flex: 1;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @include maxWidth(md) {
+            flex-direction: column-reverse;
+            height: auto;
 
             .content {
-                height: 100%;
-                width: 40.3%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                .img {
-                    width: 100px;
-                    max-width: 100%;
-                    height: auto;
-                }
-
-                .title {
-                    font-size: 30px;
-                    color: $main-color;
-                    margin-bottom: 10px;
-                    font-weight: 600;
-
-                    span {
-                        color: $active-nav-link;
-                    }
-                }
-
-                .title-sm {
-                    font-size: 17px;
-                    margin-bottom: 15px;
-                    line-height: 25px;
-                    color: #595959d6;
-                    span {
-                        display: block;
-                        font-size: 18px;
-                        margin-bottom: 5px;
-                    }
-                }
-
-                .text {
-                    font-size: 17px;
-                    color: #757575;
-                }
-
-                .list-info {
-                    li {
-                        font-size: 15px;
-                        margin-bottom: 0.3rem;
-                        color: #616161;
-                    }
-
-                    .title-ul {
-                        font-size: 17px;
-                    }
-                }
-
-                .main-btn {
-                    margin-inline: auto;
-                }
+                height: auto;
+                width: 100%;
             }
 
             .land-swiper {
-                flex: 1;
-                height: 100%;
+                height: 257px;
+                flex: unset;
                 width: 100%;
-                object-fit: cover;
-            }
-
-            @include maxWidth(md) {
-                flex-direction: column-reverse;
-                height: auto;
-
-                .content {
-                    // height: auto;
-                    width: 100%;
-                }
-
-                .land-swiper {
-                    height: 257px;
-                    flex: unset;
-                    width: 100%;
-                }
             }
         }
     }
@@ -620,8 +618,6 @@
     .swiper-pagination {
         position: relative;
         @include flex-justify(center);
-        margin-top: 35px;
-        padding: 0 2%;
 
         .swiper-pagination-bullet {
             width: 8px;

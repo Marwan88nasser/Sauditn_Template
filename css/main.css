@@ -611,6 +611,17 @@
   }
 }
 
+.video {
+  width: 100%;
+  height: 600px;
+}
+.video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .box-gallery {
   position: relative;
   display: block;
@@ -753,59 +764,55 @@
   visibility: visible;
 }
 
-.swiper-landmarks .swiper-wrapper .swiper-slide {
-  height: 318px;
-  display: flex;
-  gap: 2rem;
+.swiper-landmarks {
+  height: auto;
+  padding-bottom: 25px;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content {
+.swiper-landmarks .swiper-slide {
+  display: flex;
+  height: 320px;
+  gap: 1.5rem;
+}
+.swiper-landmarks .swiper-slide .content {
   height: 100%;
   width: 40.3%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .img {
-  width: 100px;
-  max-width: 100%;
-  height: auto;
-}
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .title {
+.swiper-landmarks .swiper-slide .content .title {
   font-size: 30px;
   color: #b88f49;
   margin-bottom: 10px;
   font-weight: 600;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .title span {
+.swiper-landmarks .swiper-slide .content .title span {
   color: #e1af5b;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .title-sm {
+.swiper-landmarks .swiper-slide .content .title-sm {
   font-size: 17px;
   margin-bottom: 15px;
   line-height: 25px;
   color: rgba(89, 89, 89, 0.8392156863);
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .title-sm span {
+.swiper-landmarks .swiper-slide .content .title-sm span {
   display: block;
   font-size: 18px;
   margin-bottom: 5px;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .text {
+.swiper-landmarks .swiper-slide .content .text {
   font-size: 17px;
   color: #757575;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .list-info li {
+.swiper-landmarks .swiper-slide .content .list-info li {
   font-size: 15px;
   margin-bottom: 0.3rem;
   color: #616161;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .list-info .title-ul {
+.swiper-landmarks .swiper-slide .content .list-info .title-ul {
   font-size: 17px;
 }
-.swiper-landmarks .swiper-wrapper .swiper-slide .content .main-btn {
-  margin-inline: auto;
-}
-.swiper-landmarks .swiper-wrapper .swiper-slide .land-swiper {
+.swiper-landmarks .swiper-slide .land-swiper {
   flex: 1;
   height: 100%;
   width: 100%;
@@ -813,14 +820,15 @@
      object-fit: cover;
 }
 @media (max-width: 991.98px) {
-  .swiper-landmarks .swiper-wrapper .swiper-slide {
+  .swiper-landmarks .swiper-slide {
     flex-direction: column-reverse;
     height: auto;
   }
-  .swiper-landmarks .swiper-wrapper .swiper-slide .content {
+  .swiper-landmarks .swiper-slide .content {
+    height: auto;
     width: 100%;
   }
-  .swiper-landmarks .swiper-wrapper .swiper-slide .land-swiper {
+  .swiper-landmarks .swiper-slide .land-swiper {
     height: 257px;
     flex: unset;
     width: 100%;
@@ -831,8 +839,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 35px;
-  padding: 0 2%;
 }
 .swiper-landmarks .swiper-pagination .swiper-pagination-bullet {
   width: 8px;
