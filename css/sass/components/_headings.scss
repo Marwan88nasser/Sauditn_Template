@@ -59,3 +59,45 @@
         background-color: $main-color;
     }
 }
+
+
+.header-section {
+    background-color: $main-color;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: white;
+    margin-bottom: 0;
+    .prog-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .container {
+        display: flex;
+        min-height: 200px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-block: 1rem;
+        position: relative;
+        .icon-header {
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            background-color: $main-color;
+            border: 10px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            color: white;
+            inset-inline-end: 0;
+            bottom: -39px;
+            .icon {
+                width: 18px;
+                height: auto;
+            }
+        }
+    }
+}
