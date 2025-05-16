@@ -38,125 +38,67 @@
       <i class="fa-solid fa-angles-up"></i>
     </div>
     <!-- end scroll to top button -->
-    <!-- Start Landing page -->
-    <section class="landing-holder">
-      <!-- Start Header -->
-      <header class="site-header">
-        <nav class="main-nav navbar navbar-expand-xl">
-          <div class="container">
-            <h1 class="m-0">
-              <a class="navbar-brand" href="index.html">
-                <img src="images/site-logo.png" alt="logo" />
-              </a>
-            </h1>
+    <!-- Start Header -->
+    <header class="site-header">
+      <nav class="main-nav navbar navbar-expand-xl">
+        <div class="container">
+          <h1 class="m-0">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/site-logo.png" alt="logo" />
+            </a>
+          </h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">من نحن</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown">
             <button
-              class="navbar-toggler"
+              class="btn-lang dropdown-toggle"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
+              data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fa-solid fa-bars"></i>
+              <img src="images/ar-flag.png" alt="Ar flag" /> العربية
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" href="index.html">الرئيسية</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">من نحن</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">اتصل بنا</a>
-                </li>
-              </ul>
-            </div>
-            <div class="dropdown">
-              <button
-                class="btn-lang dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img src="images/ar-flag.png" alt="Ar flag" /> العربية
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <img src="images/en-flag.png" alt="En flag" />
-                    English
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <img src="images/ar-flag.png" alt="Ar flag" />
-                    العربية
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <!-- End Header -->
-      <!-- Swiper -->
-      <div class="swiper mySwiper swiper-landing">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/landing-1.png" />
-            <div class="container">
-              <div class="box-intro">
-                <h2 class="title" data-swiper-parallax="-700">
-                  حضارة وطن.. وأرض تلهم الأجيال
-                </h2>
-                <p class="des" data-swiper-parallax="-1000">
-                  في كل زاوية من وطننا، قصة تحكي عن عراقة، وشعب يفخر بتراثه. من
-                  طويق الشامخ إلى واحة الأحساء، ومن المهرجانات التراثية إلى رؤية
-                  2030، تمضي السعودية بخطى ثابتة نحو مستقبل مشرق يكرّم الماضي
-                  ويحتفي به.
-                  <!-- <br>
-                  دعونا نُظهر للعالم ما نملكه من كنوز حضارية وطبيعة فاتنة. -->
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/landing-2.png" />
-            <div class="container">
-              <div class="box-intro">
-                <h2 class="title" data-swiper-parallax="-700">
-                  عسير.. جوها عليل، وطبيعتها تخطف الأنفاس...
-                </h2>
-                <p class="des" data-swiper-parallax="-1000">
-                  اكتشف سحر عسير، الجوهرة الخضراء في جنوب المملكة! هنا تلتقي
-                  الجبال الشاهقة بـ الغيوم، وتحتضن القرى التراثية ذاكرة المكان.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/landing-3.png" />
-            <div class="container">
-              <div class="box-intro">
-                <h2 class="title" data-swiper-parallax="-700">
-                  رحلة إيمانية لا تُنسى في أرض النبوة والرحمة
-                </h2>
-                <p class="des" data-swiper-parallax="-1000">
-                  مرحبًا بك في المملكة العربية السعودية، مهد الإسلام، ومقصد
-                  القلوب المؤمنة من كل أنحاء العالم.
-                </p>
-              </div>
-            </div>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="images/en-flag.png" alt="En flag" />
+                  English
+                </a>
+                <a class="dropdown-item" href="#">
+                  <img src="images/ar-flag.png" alt="Ar flag" />
+                  العربية
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-    <!-- End Landing page -->
+      </nav>
+    </header>
+    <!-- End Header -->
     <!-- Start Other Image -->
     <div class="other-image py-5">
       <div class="container">
-        <div
-          class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3"
-        >
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
           <div class="col">
             <a href="#" class="box-other-image">
               <img src="images/other-img1.jpg" alt="image" />
@@ -206,7 +148,7 @@
         </div>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
           <div class="col">
-            <a href="#" class="civilization-box">
+            <a href="#" class="offer-box">
               <img src="images/offer-1.jpg" alt="photo" class="offer-img" />
               <div class="content">
                 <h6 class="title">أناقة الماضي وجمال التراث</h6>
@@ -219,7 +161,7 @@
             </a>
           </div>
           <div class="col">
-            <a href="#" class="civilization-box">
+            <a href="#" class="offer-box">
               <img src="images/offer-2.jpg" alt="photo" class="offer-img" />
               <div class="content">
                 <h6 class="title">الحرف اليدوية والجمال الفني الثقافي</h6>
@@ -231,7 +173,7 @@
             </a>
           </div>
           <div class="col">
-            <a href="#" class="civilization-box">
+            <a href="#" class="offer-box">
               <img src="images/offer-3.jpg" alt="photo" class="offer-img" />
               <div class="content">
                 <h6 class="title">طِيبٌ من الأرض وأصالة من القلب</h6>
@@ -244,7 +186,7 @@
             </a>
           </div>
           <div class="col">
-            <a href="#" class="civilization-box">
+            <a href="#" class="offer-box">
               <img src="images/offer-4.jpg" alt="photo" class="offer-img" />
               <div class="content">
                 <h6 class="title">مرحبًا بك في أطهر بقاع الأرض</h6>
@@ -260,31 +202,63 @@
       </div>
     </div>
     <!-- End civilization -->
-    <!-- Start landmarks -->
+    <!-- Start works -->
     <div class="landmarks pt-5 pb-1">
       <div class="container-fluid">
         <div class="row g-3" x-data="{ selected: 'alula' }">
           <div class="col-12 col-md-3">
             <h6 class="title-underline">معالم المملكة</h6>
             <div class="landmarks-container">
-              <button type="button" class="box-landmark" @click="selected = 'alula'">
+              <button
+                type="button"
+                class="box-landmark"
+                @click="selected = 'alula'"
+              >
                 <span class="name">العلا</span>
-                <img src="images/Landmark-1.jpg" alt="landmark image" class="img" />
+                <img
+                  src="images/Landmark-1.jpg"
+                  alt="landmark image"
+                  class="img"
+                />
               </button>
 
-              <button type="button" class="box-landmark" @click="selected = 'alahsa'">
+              <button
+                type="button"
+                class="box-landmark"
+                @click="selected = 'alahsa'"
+              >
                 <span class="name">الأحساء</span>
-                <img src="images/Landmark-2.jpg" alt="landmark image" class="img" />
+                <img
+                  src="images/Landmark-2.jpg"
+                  alt="landmark image"
+                  class="img"
+                />
               </button>
 
-              <button type="button" class="box-landmark" @click="selected = 'tahul'">
+              <button
+                type="button"
+                class="box-landmark"
+                @click="selected = 'tahul'"
+              >
                 <span class="name">عسير تهول</span>
-                <img src="images/Landmark-3.webp" alt="landmark image" class="img" />
+                <img
+                  src="images/Landmark-3.webp"
+                  alt="landmark image"
+                  class="img"
+                />
               </button>
 
-              <button type="button" class="box-landmark" @click="selected = 'mosmak'">
+              <button
+                type="button"
+                class="box-landmark"
+                @click="selected = 'mosmak'"
+              >
                 <span class="name">قصر المصمك</span>
-                <img src="images/Landmark-4.webp" alt="landmark image" class="img" />
+                <img
+                  src="images/Landmark-4.webp"
+                  alt="landmark image"
+                  class="img"
+                />
               </button>
             </div>
           </div>
@@ -766,8 +740,8 @@
         </div>
       </div>
     </div>
-    <!-- End landmarks -->
-    <!-- Start video -->
+    <!-- End works -->
+    <!-- Start gallery -->
     <div class="video pt-4 pb-5">
       <div class="container-fluid px-0">
         <a
@@ -779,7 +753,7 @@
         </a>
       </div>
     </div>
-    <!-- End video -->
+    <!-- End gallery -->
     <footer class="footer">
       <div class="container">
         <div class="row">

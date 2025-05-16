@@ -1,119 +1,4 @@
-.service-box {
-    @include flex-column-center;
-    min-height: 260px;
-    padding: 10px;
-    border-radius: 23px;
-    text-align: center;
-    transition: $sm-transition;
-    background-color: $white-color;
-
-    .img-holder {
-        @include flex-center;
-        height: 100px;
-        margin-bottom: 10px;
-
-        img {
-            width: 92px;
-            height: 95px;
-        }
-    }
-
-    .title {
-        font-size: 21px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        line-height: 22px;
-        text-align: center;
-        color: $main-text-color;
-    }
-
-    .des {
-        margin-bottom: 0px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 22px;
-        text-align: center;
-        color: $main-color-light;
-    }
-
-    &.active,
-    &:hover {
-        box-shadow: 0 0 10px 0 rgb(17 71 107 / 20%);
-
-        .title {
-            color: $main-color;
-        }
-    }
-}
-
-.job-box {
-    position: relative;
-    width: 100%;
-    height: 357px;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: $sm-transition;
-
-    img {
-        @include set-cover-img;
-        transition: $sm-transition;
-    }
-
-    .title {
-        position: absolute;
-        left: 50%;
-        bottom: 10%;
-        transform: translateX(-50%);
-        color: $white-color;
-        font-size: 20px;
-        font-weight: 700;
-        z-index: 12;
-    }
-
-    &::before {
-        content: "";
-        @include reset-position;
-        @include full-w-h;
-        background: linear-gradient(0deg, rgb(0 0 0 / 72%), transparent);
-        z-index: 11;
-    }
-
-    &:hover {
-        img {
-            transform: scale(1.02);
-        }
-    }
-}
-
-.box-info {
-    @include flex-column-center;
-    gap: 15px;
-    width: 600px;
-    max-width: 100%;
-    margin: auto;
-
-    .name {
-        margin-bottom: 0;
-        color: $main-color;
-        font-weight: 600;
-        font-size: 25px;
-    }
-
-    .des {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 30px;
-        margin-bottom: 0px;
-        color: $main-color-light;
-        text-align: center;
-    }
-
-    img {
-        @include circle(180px);
-    }
-}
-
-.offer-box {
+.civilization-box {
     position: relative;
     display: block;
     overflow: hidden;
@@ -164,134 +49,6 @@
         }
     }
 }
-
-.partner-box {
-    @include flex-column-center;
-    min-height: 200px;
-    padding: 5px;
-    text-align: center;
-    background-color: $white-color;
-
-    img {
-        width: 100px;
-        height: auto;
-        object-fit: contain;
-
-        &.won-custom {
-            width: 200px;
-        }
-    }
-}
-
-// blocks article
-.box-article {
-    .date-holder {
-        z-index: 100;
-        @include reset-position;
-        @include flex-center;
-        gap: 5px;
-        background-color: $main-color;
-        padding: 9px 20px;
-        border-radius: 0px 10px 0px 10px;
-        color: $white-color;
-        font-size: 16px;
-
-        i,
-        svg {
-            color: $white-color;
-        }
-
-        p {
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-    }
-
-    &.show-article {
-        transition: $sm-transition;
-        position: relative;
-        border: 1px solid #cfd6d7;
-        border-radius: 10px;
-        padding: 15px;
-
-        .date-holder {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 7px 20px;
-            width: fit-content;
-        }
-
-        .img-holder {
-            margin-bottom: 10px;
-            border-radius: 10px;
-
-            .img-article {
-                border-radius: 10px;
-                transition: transform, $sm-transition;
-                width: 100%;
-                object-fit: cover;
-                height: 260px;
-            }
-        }
-
-        .text-holder {
-            .article-title {
-                display: block;
-                transition: $sm-transition;
-                color: #3f5c74;
-                font-size: 17px;
-                font-weight: 700;
-                margin-bottom: 5px;
-            }
-
-            .article-des {
-                font-weight: 600;
-                color: #757575;
-                font-size: 15px;
-                margin-bottom: 0%;
-            }
-        }
-
-        .category {
-            display: block;
-            width: 100%;
-            color: #757575;
-            font-size: 11px;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        .share-holder {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-            .circle {
-                cursor: pointer;
-                transition: $sm-transition;
-                @include circle(35px);
-                @include flex-center;
-                background-color: $main-color;
-
-                &:hover {
-                    transform: translateY(-5px);
-                }
-
-                a {
-                    @include flex-center;
-                    color: $white-color;
-
-                    i,
-                    svg {
-                        font-size: 17px;
-                    }
-                }
-            }
-        }
-    }
-}
-
 
 .box-intro {
     position: absolute;
@@ -349,148 +106,35 @@
     }
 }
 
-.box-gallery {
+.box-landmark {
     position: relative;
-    display: block;
-    @include full-w-h;
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
 
     .img {
         @include set-cover-img;
-        height: 300px;
-        max-width: 100%;
     }
 
-    .overlay {
-        @include center-position;
+    .name {
+        position: absolute;
+        inset: 0;
         @include full-w-h;
-        @include flex-column-center;
-        gap: 15px;
-        background-color: rgba(255, 167, 38, 0.9);
-        font-size: 30px;
+        @include flex-center;
+        font-size: 13px;
         font-weight: 600;
-        color: $white-color;
-        transition: $sm-transition;
         opacity: 0;
         visibility: hidden;
-
-        i,
-        svg {
-            font-size: 50px;
-        }
+        transition: $sm-transition;
+        color: #fff;
+        background-color: #00000096;
     }
 
     &:hover {
-        .overlay {
+        .name {
             opacity: 1;
             visibility: visible;
-        }
-    }
-}
-
-.card-client {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
-
-    .info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-
-        .avatar {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .name {
-            color: $main-color;
-            font-size: 16px;
-            line-height: normal;
-            margin: 0;
-            font-weight: 500;
-        }
-
-        .role {
-            color: rgba(47, 47, 47, 0.6);
-            font-size: 13px;
-            font-weight: 400;
-            line-height: normal;
-        }
-    }
-
-    .stars {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-
-        .icon {
-            color: #cfd6d7;
-            width: 20px;
-
-            &.active {
-                color: #ffb800;
-            }
-        }
-    }
-
-    .text {
-        color: rgba(47, 47, 47, 0.8);
-        text-align: justify;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 150%;
-
-        /* 21px */
-        span {
-            color: $main-color;
-            font-weight: 500;
-        }
-    }
-}
-
-.landmarks-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-gap: 5px;
-
-    .box-landmark {
-        position: relative;
-        width: 100%;
-        height: 60px;
-        border-radius: 8px;
-        overflow: hidden;
-
-        .img {
-            @include set-cover-img;
-        }
-
-        .name {
-            position: absolute;
-            inset: 0;
-            @include full-w-h;
-            @include flex-center;
-            font-size: 13px;
-            font-weight: 600;
-            opacity: 0;
-            visibility: hidden;
-            transition: $sm-transition;
-            color: #fff;
-            background-color: #00000096;
-        }
-
-        &:hover {
-            .name {
-                opacity: 1;
-                visibility: visible;
-            }
         }
     }
 }
