@@ -1,51 +1,50 @@
 .swiper-landing {
-  @include full-w-h;
+    @include full-w-h;
 
-  .swiper-wrapper {
-    .swiper-slide {
-      position: relative;
+    .swiper-wrapper {
+        .swiper-slide {
+            position: relative;
 
-      .container {
-        position: relative;
-        height: 100%;
-      }
+            .container {
+                position: relative;
+                height: 100%;
+            }
 
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        @include full-w-h;
-      }
-      &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        @include full-w-h;
-        background-color: #0000003b;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include full-w-h;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                @include full-w-h;
+                background-color: #0000003b;
+            }
+        }
     }
+
+    .swiper-pagination {
+        bottom: 3%;
+        @include flex-justify(flex-end);
+        padding: 0 2%;
+
+        .swiper-pagination-bullet {
+            width: 24px;
+            height: 24px;
+            opacity: 1;
+            transition: $sm-transition;
+            background-color: $white-color;
+
+            &.swiper-pagination-bullet-active {
+                background-color: $main-color;
+            }
+        }
     }
-  }
-
-  .swiper-pagination {
-    bottom: 3%;
-    @include flex-justify(flex-end);
-    padding: 0 2%;
-
-    .swiper-pagination-bullet {
-      width: 24px;
-      height: 24px;
-      opacity: 1;
-      transition: $sm-transition;
-      background-color: $white-color;
-
-      &.swiper-pagination-bullet-active {
-        background-color: $main-color;
-      }
-    }
-  }
 }
-
-
 
 .swiper-landmarks {
     height: auto;
