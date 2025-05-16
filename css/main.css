@@ -725,11 +725,11 @@ textarea:focus::placeholder {
   text-align: justify;
 }
 .section-show-product .content-card {
-  background-color: white;
+  height: 100%;
   border-radius: 8px;
+  background-color: white;
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .section-show-product .content-card .card-img {
