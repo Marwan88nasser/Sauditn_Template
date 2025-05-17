@@ -82,16 +82,8 @@
   padding-top: 1rem;
   font-size: 0.9rem;
   text-align: center;
-}
-
-.footer-link {
-  color: #f5e6c9;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  margin: 0 0.5rem;
-
-  &:hover {
-    color: #ffffff;
+  p {
+    margin-bottom: 0;
   }
 }
 
