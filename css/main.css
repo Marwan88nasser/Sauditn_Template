@@ -739,7 +739,7 @@ textarea:focus::placeholder {
      object-fit: cover;
 }
 .section-show-product .content-card .card-content {
-  padding: 1.5rem;
+  padding: 1.3rem;
 }
 .section-show-product .content-card .card-content .card-title {
   font-size: 1.3rem;
@@ -749,7 +749,7 @@ textarea:focus::placeholder {
 }
 .section-show-product .content-card .card-content .card-text {
   color: #333333;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 .section-show-product .content-card:hover {
   transform: translateY(-5px);
